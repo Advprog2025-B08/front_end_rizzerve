@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +28,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;staging&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -83,7 +80,10 @@
       <workItem from="1744346382883" duration="260000" />
       <workItem from="1744346644789" duration="3000" />
       <workItem from="1744346649457" duration="155000" />
-      <workItem from="1744346807148" duration="23000" />
+      <workItem from="1744346807148" duration="937000" />
+      <workItem from="1744347883321" duration="3000" />
+      <workItem from="1744347887375" duration="100000" />
+      <workItem from="1744347990435" duration="529000" />
     </task>
     <servers />
   </component>
