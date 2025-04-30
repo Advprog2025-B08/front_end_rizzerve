@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="" />
+    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/rating/components/ProductCard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rating/pages/MenuPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rating/pages/ProductDetailPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rating/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="HcfAGbxm" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -28,7 +42,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;staging&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;rating&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -37,10 +51,19 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/rating/components" />
+      <recent name="$PROJECT_DIR$/src/rating" />
+      <recent name="$PROJECT_DIR$/src/rating/components/pages" />
+      <recent name="$PROJECT_DIR$/src/components/rating" />
+    </key>
+  </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
@@ -84,6 +107,19 @@
       <workItem from="1744347883321" duration="3000" />
       <workItem from="1744347887375" duration="100000" />
       <workItem from="1744347990435" duration="529000" />
+      <workItem from="1744348523203" duration="650000" />
+      <workItem from="1745983328227" duration="79000" />
+      <workItem from="1745989987541" duration="111000" />
+      <workItem from="1745990101000" duration="4000" />
+      <workItem from="1745990115803" duration="607000" />
+      <workItem from="1745990728497" duration="110000" />
+      <workItem from="1745990842035" duration="101000" />
+      <workItem from="1745990944879" duration="10000" />
+      <workItem from="1745990956841" duration="176000" />
+      <workItem from="1745991134712" duration="2000" />
+      <workItem from="1745991143710" duration="35000" />
+      <workItem from="1745991180540" duration="1000" />
+      <workItem from="1745991183404" duration="54000" />
     </task>
     <servers />
   </component>
