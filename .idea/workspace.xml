@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rating/components/RatingAverage/RatingAverage.test.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/rating/components/RatingAverage/RatingAverage.test.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +190,11 @@
       <workItem from="1746516020059" duration="287000" />
       <workItem from="1746516309031" duration="2000" />
       <workItem from="1746516312576" duration="169000" />
-      <workItem from="1746516483426" duration="11000" />
+      <workItem from="1746516483426" duration="172000" />
+      <workItem from="1746532185850" duration="9000" />
+      <workItem from="1746532203812" duration="87000" />
+      <workItem from="1746532293165" duration="79000" />
+      <workItem from="1746532374171" duration="136000" />
     </task>
     <servers />
   </component>
