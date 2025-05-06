@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import RatingAverage from './RatingAverage';
 import fetchMock from 'jest-fetch-mock';
 
@@ -11,8 +11,9 @@ test('menampilkan rata-rata rating dari API', async () => {
 
     render(<RatingAverage menuId={1} />);
 
-    await waitFor(() => {
-        expect(screen.getByText(/Rata-rata rating:/)).toBeInTheDocument();
-        expect(screen.getByText(/4.5/)).toBeInTheDocument();
-    });
+    // eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
+    expect(await screen.findByText(/Rata-rata rating:/)).toBeInTheDocument();
+
+    // eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
+    expect(await screen.findByText(/4.5/)).toBeInTheDocument();
 });
