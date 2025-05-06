@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/rating/components/ProductCard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingList.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/pages/MenuPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/pages/ProductDetailPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/services/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-    </list>
+    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +29,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Jest.RatingForm.test.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Tests in mocks/.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;rating&quot;,
@@ -49,10 +40,12 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve/node_modules/react-scripts&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -64,7 +57,25 @@
       <recent name="$PROJECT_DIR$/src/components/rating" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="Jest.RatingForm.test.jsx">
+    <configuration name="RatingForm.test.jsx" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/src/rating/components/RatingForm/RatingForm.test.jsx" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in mocks/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="DIRECTORY" />
+      <test-directory value="$PROJECT_DIR$/src/rating/mocks" />
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -78,6 +89,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.RatingForm.test.jsx" />
+        <item itemvalue="Jest.Tests in mocks/" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -119,7 +136,17 @@
       <workItem from="1745991134712" duration="2000" />
       <workItem from="1745991143710" duration="35000" />
       <workItem from="1745991180540" duration="1000" />
-      <workItem from="1745991183404" duration="54000" />
+      <workItem from="1745991183404" duration="190000" />
+      <workItem from="1745991375446" duration="1000" />
+      <workItem from="1745991378096" duration="88000" />
+      <workItem from="1745992617097" duration="394000" />
+      <workItem from="1746512312802" duration="47000" />
+      <workItem from="1746512368776" duration="203000" />
+      <workItem from="1746512574370" duration="177000" />
+      <workItem from="1746512753626" duration="603000" />
+      <workItem from="1746513360410" duration="286000" />
+      <workItem from="1746513649454" duration="150000" />
+      <workItem from="1746513802742" duration="55000" />
     </task>
     <servers />
   </component>

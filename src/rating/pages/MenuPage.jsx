@@ -1,21 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import ProductCard from '../components/ProductCard';
 
-// Mock data - replace with actual API calls
+// Mock data untuk menu
 const mockProducts = [
-    { id: 1, name: 'Nasi Goreng', description: 'Nasi goreng spesial dengan telur dan ayam' },
-    { id: 2, name: 'Mie Ayam', description: 'Mie ayam dengan pangsit goreng' },
-    { id: 3, name: 'Es Teh', description: 'Es teh manis segar' },
-    { id: 4, name: 'Jus Alpukat', description: 'Jus alpukat dengan susu kental manis' },
+    { id: 1, name: 'Nasi Goreng', description: 'Nasi goreng spesial' },
+    { id: 2, name: 'Mie Ayam', description: 'Mie ayam pangsit' },
+    { id: 3, name: 'Es Teh', description: 'Es teh manis' }
 ];
 
 const MenuPage = () => {
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        // In a real app, you would fetch products from your API
-        setProducts(mockProducts);
-    }, []);
+    const [products] = useState(mockProducts); // Tetap gunakan mock data
 
     return (
         <div className="menu-page">
