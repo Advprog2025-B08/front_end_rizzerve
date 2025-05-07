@@ -29,11 +29,15 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Jest.All Tests (1).executor&quot;: &quot;Run&quot;,
     &quot;Jest.All Tests.executor&quot;: &quot;Run&quot;,
     &quot;Jest.RatingForm.test.jsx.executor&quot;: &quot;Run&quot;,
     &quot;Jest.Tests in mocks/.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Tests in rating/ (1).executor&quot;: &quot;Run&quot;,
     &quot;Jest.Tests in rating/.executor&quot;: &quot;Run&quot;,
     &quot;Jest.Tests in src/.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.menampilkan halaman rating di root path.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;rating&quot;,
@@ -60,16 +64,14 @@
       <recent name="$PROJECT_DIR$/src/components/rating" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Tests in rating/">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Jest.Tests in src/">
+    <configuration name="All Tests (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/src" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
     </configuration>
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
@@ -79,28 +81,10 @@
       <scope-kind value="ALL" />
       <method v="2" />
     </configuration>
-    <configuration name="RatingForm.test.jsx" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="Tests in rating/ (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/rating/components/RatingForm/RatingForm.test.jsx" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in mocks/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="DIRECTORY" />
-      <test-directory value="$PROJECT_DIR$/src/rating/mocks" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Tests in rating/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
+      <working-dir value="$PROJECT_DIR$/src" />
       <envs />
       <scope-kind value="DIRECTORY" />
       <test-directory value="$PROJECT_DIR$/src/rating" />
@@ -113,6 +97,18 @@
       <envs />
       <scope-kind value="DIRECTORY" />
       <test-directory value="$PROJECT_DIR$/src" />
+      <method v="2" />
+    </configuration>
+    <configuration name="menampilkan halaman rating di root path" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.test.js" />
+      <test-names>
+        <test-name value="menampilkan halaman rating di root path" />
+      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -130,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Tests in rating/" />
         <item itemvalue="Jest.Tests in src/" />
         <item itemvalue="Jest.All Tests" />
-        <item itemvalue="Jest.RatingForm.test.jsx" />
-        <item itemvalue="Jest.Tests in mocks/" />
+        <item itemvalue="Jest.menampilkan halaman rating di root path" />
+        <item itemvalue="Jest.Tests in rating/ (1)" />
+        <item itemvalue="Jest.All Tests (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -206,6 +202,25 @@
       <workItem from="1746532293165" duration="79000" />
       <workItem from="1746532374171" duration="136000" />
       <workItem from="1746532512156" duration="1336000" />
+      <workItem from="1746533852475" duration="490000" />
+      <workItem from="1746534352630" duration="325000" />
+      <workItem from="1746586516229" duration="75000" />
+      <workItem from="1746586592917" duration="500000" />
+      <workItem from="1746587095028" duration="6000" />
+      <workItem from="1746587102633" duration="216000" />
+      <workItem from="1746587321677" duration="391000" />
+      <workItem from="1746587716348" duration="9000" />
+      <workItem from="1746587736210" duration="248000" />
+      <workItem from="1746587986659" duration="2000" />
+      <workItem from="1746587989954" duration="88000" />
+      <workItem from="1746588080125" duration="66000" />
+      <workItem from="1746588148275" duration="252000" />
+      <workItem from="1746588403572" duration="1000" />
+      <workItem from="1746588406631" duration="121000" />
+      <workItem from="1746588529614" duration="1000" />
+      <workItem from="1746588532556" duration="173000" />
+      <workItem from="1746588707996" duration="1000" />
+      <workItem from="1746588710834" duration="118000" />
     </task>
     <servers />
   </component>

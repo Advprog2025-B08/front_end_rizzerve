@@ -10,6 +10,7 @@
     "axios": "^1.9.0",
     "fetch-mock-jest": "^1.5.1",
     "jest-fetch-mock": "^3.0.3",
+    "jest-resolve": "^29.7.0",
     "msw": "^2.7.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -46,5 +47,10 @@
     "transformIgnorePatterns": [
       "node_modules/(?!(react-router-dom)/)"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.27.2",
+    "@babel/preset-react": "^7.27.1",
+    "babel-jest": "^29.7.0"
   }
 }
