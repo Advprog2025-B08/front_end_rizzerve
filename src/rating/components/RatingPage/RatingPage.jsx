@@ -1,29 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { getAverageRating } from '../../services/RatingApi';
+import React, { useState } from 'react';
+import RatingForm from '../RatingForm/RatingForm';
+import RatingAverage from '../RatingAverage/RatingAverage';
 
 export default function RatingPage() {
-    const [averageRating, setAverageRating] = useState(null);
-
-    useEffect(() => {
-        getAverageRating().then(data => {
-            setAverageRating(data.average);
-        });
-    }, []);
+    const [menuId, setMenuId] = useState('');
 
     return (
         <div>
             <h1>Halaman Rating</h1>
-            <form>
-                <label>
-                    Rating:
-                    <input type="number" aria-label="rating" />
-                </label>
-                <button type="submit">Submit</button>
-            </form>
-            {averageRating !== null ? (
-                <p>Rata-rata rating: {averageRating}</p>
-            ) : (
-                <p>Loading...</p>
+            <label>
+                Menu ID:
+                <input
+                    type="number"
+                    value={menuId}
+                    onChange={e => setMenuId(e.target.value)}
+                />
+            </label>
+
+            {menuId && (
+                <>
+                    <RatingAverage menuId={menuId} />
+                    <RatingForm menuId={menuId} />
+                </>
             )}
         </div>
     );

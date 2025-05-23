@@ -7,13 +7,9 @@ beforeEach(() => {
 });
 
 test('menampilkan rata-rata rating dari API', async () => {
-    fetchMock.mockResponseOnce(JSON.stringify(4.5));
+    fetchMock.mockResponseOnce(JSON.stringify({ average: 4.5 }));
 
     render(<RatingAverage menuId={1} />);
 
-    // eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
-    expect(await screen.findByText(/Rata-rata rating:/)).toBeInTheDocument();
-
-    // eslint-disable-next-line testing-library/no-wait-for-multiple-assertions
-    expect(await screen.findByText(/4.5/)).toBeInTheDocument();
+    expect(await screen.findByText(/Rata-rata rating menu 1: 4.5/)).toBeInTheDocument();
 });
