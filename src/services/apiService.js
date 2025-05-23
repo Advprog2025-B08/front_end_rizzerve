@@ -46,7 +46,7 @@ export const apiService = {
   
   getAllMeja: async (token) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/read`, {
+      const response = await fetch(`${API_BASE_URL}/meja/admin/read`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -68,7 +68,7 @@ export const apiService = {
   
   getMejaById: async (token, mejaId) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/read/${mejaId}`, {
+      const response = await fetch(`${API_BASE_URL}/meja/admin/read/${mejaId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -90,7 +90,7 @@ export const apiService = {
   
   createMeja: async (token, mejaData) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/create`, {
+      const response = await fetch(`${API_BASE_URL}/meja/admin/create`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -113,7 +113,7 @@ export const apiService = {
   
   updateMeja: async (token, mejaId, mejaData) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/update/${mejaId}`, {
+      const response = await fetch(`${API_BASE_URL}/meja/admin/update/${mejaId}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -136,7 +136,7 @@ export const apiService = {
   
   deleteMeja: async (token, mejaId) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/delete/${mejaId}`, {
+      const response = await fetch(`${API_BASE_URL}/meja/admin/delete/${mejaId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -158,7 +158,7 @@ export const apiService = {
   
   setUserToMeja: async (token, mejaId, username) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/set/${mejaId}`, {
+      const response = await fetch(`${API_BASE_URL}/meja/user/set/${mejaId}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -181,7 +181,7 @@ export const apiService = {
   
   completeOrder: async (token, mejaId) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/complete_order/${mejaId}`, {
+      const response = await fetch(`${API_BASE_URL}/meja/user/complete_order/${mejaId}`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
