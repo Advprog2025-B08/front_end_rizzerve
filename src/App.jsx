@@ -5,7 +5,7 @@ export default function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<RatingPage />} />
+                <Route path="/ratings" element={<RatingPage />} />
             </Routes>
         </Router>
     );
