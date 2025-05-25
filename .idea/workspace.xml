@@ -27,35 +27,35 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Jest.All Tests (1).executor&quot;: &quot;Run&quot;,
-    &quot;Jest.All Tests.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.RatingForm.test.jsx.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.Tests in mocks/.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.Tests in rating/ (1).executor&quot;: &quot;Run&quot;,
-    &quot;Jest.Tests in rating/.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.Tests in src/.executor&quot;: &quot;Run&quot;,
-    &quot;Jest.menampilkan halaman rating di root path.executor&quot;: &quot;Run&quot;,
-    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;rating&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve/node_modules/react-scripts&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Jest.All Tests (1).executor": "Run",
+    "Jest.All Tests.executor": "Run",
+    "Jest.RatingForm.test.jsx.executor": "Run",
+    "Jest.Tests in mocks/.executor": "Run",
+    "Jest.Tests in rating/ (1).executor": "Run",
+    "Jest.Tests in rating/.executor": "Run",
+    "Jest.Tests in src/.executor": "Run",
+    "Jest.menampilkan halaman rating di root path.executor": "Run",
+    "Node.js.App.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "checkout",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve/node_modules/react-scripts",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.npm start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.general",
+    "ts.external.directory.path": "C:\\Users\\daffa\\TugasMenugasKuliah-2\\Adpro\\front_end_rizzerve\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/rating/components" />
@@ -64,7 +64,7 @@
       <recent name="$PROJECT_DIR$/src/components/rating" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Tests in src/">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="All Tests (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />

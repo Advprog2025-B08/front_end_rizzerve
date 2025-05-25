@@ -30,6 +30,7 @@ export function AuthProvider({ children }) {
       const { token, user } = await AuthService.login(credentials)
       localStorage.setItem('authToken', token)
       localStorage.setItem('userData', JSON.stringify(user))
+      localStorage.setItem('userId', user.id) 
       setUser(user)
       return { success: true }
     } finally {
@@ -43,6 +44,7 @@ export function AuthProvider({ children }) {
     } finally {
       localStorage.removeItem('authToken')
       localStorage.removeItem('userData')
+      localStorage.removeItem('userId')
       setUser(null)
     }
   }
