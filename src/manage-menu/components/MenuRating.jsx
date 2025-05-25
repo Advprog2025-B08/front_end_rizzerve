@@ -32,7 +32,6 @@ export default function MenuRating({ menuId }) {
     try {
       const userData = JSON.parse(localStorage.getItem('userData'));
       const userId = userData?.userId || userData?.id;
-      console.log('user data: ', userData, userId);
 
       const response = await fetch('http://localhost:8080/ratings', {
         method: 'POST',
