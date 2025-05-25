@@ -55,7 +55,7 @@ class MenuRepository {
   }
 
   async updateMenu(id, menuData) {
-    return this.client.put(`/menus/${id}`, menuData);
+    return this.client.put(`/menus/admin/${id}`, menuData);
   }
 
   async deleteMenu(id) {

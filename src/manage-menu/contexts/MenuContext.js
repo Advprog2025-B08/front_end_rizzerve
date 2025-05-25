@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
+import MenuService from '../services/MenuService'
+import { useAuth } from '../../auth/contexts/AuthContext'
 
 const MenuContext = createContext()
 
@@ -13,6 +15,8 @@ export function useMenu() {
 export function MenuProvider({ children }) {
   const [selectedItems, setSelectedItems] = useState([])
   const [cart, setCart] = useState([])
+  const { isAdmin } = useAuth()         // pull from AuthContext
+  const menuService = new MenuService() // your API wrapper
 
   const addToCart = (item) => {
     setCart(prev => {
@@ -55,6 +59,8 @@ export function MenuProvider({ children }) {
     <MenuContext.Provider value={{
       selectedItems,
       setSelectedItems,
+      isAdmin,
+      menuService,
       cart,
       addToCart,
       removeFromCart,

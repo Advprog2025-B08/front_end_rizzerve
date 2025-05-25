@@ -7,6 +7,7 @@ import MenuDashboard from './manage-menu/pages/MenuDashboard';
 import LoginPage from './auth/pages/LoginPage';
 import RegisterPage from './auth/pages/RegisterPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import RatingPage from './rating/components/RatingPage/RatingPage';
 
 // Component to handle the root path redirection
 function RootRedirect() {
@@ -50,6 +51,14 @@ export default function Routes() {
             element={
               <ProtectedRoute>
                 <MenuDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/ratings"
+            element={
+              <ProtectedRoute>
+                <RatingPage />
               </ProtectedRoute>
             }
           />
