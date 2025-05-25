@@ -7,6 +7,7 @@ import MenuDashboard from './manage-menu/pages/MenuDashboard';
 import LoginPage from './auth/pages/LoginPage';
 import RegisterPage from './auth/pages/RegisterPage';
 import ProtectedRoute from './components/ProtectedRoute';
+import RatingPage from './rating/components/RatingPage/RatingPage';
 import CheckoutModule from "./checkout/components/CheckoutModule";
 
 // Component to handle the root path redirection
@@ -54,12 +55,22 @@ export default function Routes() {
               </ProtectedRoute>
             }
           />
-            <Route path="/checkout" element={
-            <ProtectedRoute>
-            <CheckoutModule />
-            </ProtectedRoute>
+          <Route
+            path="/ratings"
+            element={
+              <ProtectedRoute>
+                <RatingPage />
+              </ProtectedRoute>
             }
-        />
+          />
+            <Route
+                path="/checkout"
+                element={
+                    <ProtectedRoute>
+                        <CheckoutModule />
+                    </ProtectedRoute>
+                }
+            />
         </Route>
       </RouterRoutes>
     </BrowserRouter>
