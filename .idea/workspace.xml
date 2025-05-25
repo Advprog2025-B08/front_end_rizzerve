@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkout/components/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/components/CartItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkout/components/CheckoutModule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/components/CheckoutModule.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkout/components/CheckoutSummary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/components/CheckoutSummary.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkout/hooks/useCheckout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/hooks/useCheckout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/checkout/services/CheckoutApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/services/CheckoutApi.js" afterDir="false" />
-    </list>
+    <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
