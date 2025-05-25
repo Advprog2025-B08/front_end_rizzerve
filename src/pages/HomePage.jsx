@@ -14,7 +14,7 @@ export default function HomePage() {
       {isAuthenticated ? (
         <div>
           <p className="text-lg text-gray-600 mb-8">
-            Hello, {user?.name}! Ready to manage your restaurant?
+            Hello, {user?.username}! Ready to manage your restaurant?
           </p>
           <Link
             to="/menu"

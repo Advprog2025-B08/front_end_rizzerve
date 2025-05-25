@@ -13,6 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="HcfAGbxm" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -26,22 +29,88 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Jest.All Tests (1).executor&quot;: &quot;Run&quot;,
+    &quot;Jest.All Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.RatingForm.test.jsx.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Tests in mocks/.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Tests in rating/ (1).executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Tests in rating/.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.Tests in src/.executor&quot;: &quot;Run&quot;,
+    &quot;Jest.menampilkan halaman rating di root path.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.App.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;staging&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;rating&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve/node_modules/react-scripts&quot;,
     &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.npm start.executor&quot;: &quot;Run&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/rating/components" />
+      <recent name="$PROJECT_DIR$/src/rating" />
+      <recent name="$PROJECT_DIR$/src/rating/components/pages" />
+      <recent name="$PROJECT_DIR$/src/components/rating" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Tests in src/">
+    <configuration name="All Tests (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/src" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="All Tests" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in rating/ (1)" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$/src" />
+      <envs />
+      <scope-kind value="DIRECTORY" />
+      <test-directory value="$PROJECT_DIR$/src/rating" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in src/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="DIRECTORY" />
+      <test-directory value="$PROJECT_DIR$/src" />
+      <method v="2" />
+    </configuration>
+    <configuration name="menampilkan halaman rating di root path" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/App.test.js" />
+      <test-names>
+        <test-name value="menampilkan halaman rating di root path" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -55,6 +124,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Tests in src/" />
+        <item itemvalue="Jest.All Tests" />
+        <item itemvalue="Jest.menampilkan halaman rating di root path" />
+        <item itemvalue="Jest.Tests in rating/ (1)" />
+        <item itemvalue="Jest.All Tests (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -84,6 +162,70 @@
       <workItem from="1744347883321" duration="3000" />
       <workItem from="1744347887375" duration="100000" />
       <workItem from="1744347990435" duration="529000" />
+      <workItem from="1744348523203" duration="650000" />
+      <workItem from="1745983328227" duration="79000" />
+      <workItem from="1745989987541" duration="111000" />
+      <workItem from="1745990101000" duration="4000" />
+      <workItem from="1745990115803" duration="607000" />
+      <workItem from="1745990728497" duration="110000" />
+      <workItem from="1745990842035" duration="101000" />
+      <workItem from="1745990944879" duration="10000" />
+      <workItem from="1745990956841" duration="176000" />
+      <workItem from="1745991134712" duration="2000" />
+      <workItem from="1745991143710" duration="35000" />
+      <workItem from="1745991180540" duration="1000" />
+      <workItem from="1745991183404" duration="190000" />
+      <workItem from="1745991375446" duration="1000" />
+      <workItem from="1745991378096" duration="88000" />
+      <workItem from="1745992617097" duration="394000" />
+      <workItem from="1746512312802" duration="47000" />
+      <workItem from="1746512368776" duration="203000" />
+      <workItem from="1746512574370" duration="177000" />
+      <workItem from="1746512753626" duration="603000" />
+      <workItem from="1746513360410" duration="286000" />
+      <workItem from="1746513649454" duration="150000" />
+      <workItem from="1746513802742" duration="55000" />
+      <workItem from="1746513859861" duration="234000" />
+      <workItem from="1746514096569" duration="556000" />
+      <workItem from="1746514655724" duration="218000" />
+      <workItem from="1746514876264" duration="300000" />
+      <workItem from="1746515178829" duration="398000" />
+      <workItem from="1746515579991" duration="113000" />
+      <workItem from="1746515695356" duration="253000" />
+      <workItem from="1746515950424" duration="67000" />
+      <workItem from="1746516020059" duration="287000" />
+      <workItem from="1746516309031" duration="2000" />
+      <workItem from="1746516312576" duration="169000" />
+      <workItem from="1746516483426" duration="172000" />
+      <workItem from="1746532185850" duration="9000" />
+      <workItem from="1746532203812" duration="87000" />
+      <workItem from="1746532293165" duration="79000" />
+      <workItem from="1746532374171" duration="136000" />
+      <workItem from="1746532512156" duration="1336000" />
+      <workItem from="1746533852475" duration="490000" />
+      <workItem from="1746534352630" duration="325000" />
+      <workItem from="1746586516229" duration="75000" />
+      <workItem from="1746586592917" duration="500000" />
+      <workItem from="1746587095028" duration="6000" />
+      <workItem from="1746587102633" duration="216000" />
+      <workItem from="1746587321677" duration="391000" />
+      <workItem from="1746587716348" duration="9000" />
+      <workItem from="1746587736210" duration="248000" />
+      <workItem from="1746587986659" duration="2000" />
+      <workItem from="1746587989954" duration="88000" />
+      <workItem from="1746588080125" duration="66000" />
+      <workItem from="1746588148275" duration="252000" />
+      <workItem from="1746588403572" duration="1000" />
+      <workItem from="1746588406631" duration="121000" />
+      <workItem from="1746588529614" duration="1000" />
+      <workItem from="1746588532556" duration="173000" />
+      <workItem from="1746588707996" duration="1000" />
+      <workItem from="1746588710834" duration="118000" />
+      <workItem from="1746588831148" duration="378000" />
+      <workItem from="1746589369694" duration="194000" />
+      <workItem from="1747988720051" duration="630000" />
+      <workItem from="1747989353507" duration="3000" />
+      <workItem from="1747989358134" duration="137000" />
     </task>
     <servers />
   </component>
