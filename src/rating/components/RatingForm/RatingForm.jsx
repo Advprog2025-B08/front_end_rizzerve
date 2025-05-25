@@ -9,7 +9,7 @@ export default function RatingForm({ menuId }) {
         const userData = JSON.parse(localStorage.getItem('userData'));
         const userId = userData?.userId || userData?.id || 1;
 
-        const response = await fetch('http://localhost:8080/ratings', {
+        const response = await fetch('http://localhost:8080/api/ratings', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

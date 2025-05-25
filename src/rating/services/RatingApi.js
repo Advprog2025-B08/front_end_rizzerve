@@ -14,13 +14,48 @@ async function authorizedFetch(url, options = {}) {
 
 export async function getAverageRatingByMenuIdAsync(menuId) {
     const response = await authorizedFetch(`${BASE_URL}/average/${menuId}`);
-    const text = await response.text();
-
     if (!response.ok) {
-        throw new Error('Gagal fetch average rating');
+        throw new Error('Failed to fetch average rating');
     }
-
-    return JSON.parse(text);
+    return response.json();
 }
 
+// Updated function to use the simpler endpoint
+export async function getUserRating(userId, menuId) {
+    const response = await authorizedFetch(`${BASE_URL}/user-rating?userId=${userId}&menuId=${menuId}`);
+    if (response.status === 404) return null;
+    if (!response.ok) {
+        throw new Error('Failed to fetch user rating');
+    }
+    return response.json(); // returns { id, ratingValue }
+}
 
+export async function createRatingAsync(menuId, userId, ratingValue) {
+    const response = await authorizedFetch(BASE_URL, {
+        method: 'POST',
+        body: JSON.stringify({ menuId, userId, ratingValue })
+    });
+    if (!response.ok) {
+        throw new Error('Failed to create rating');
+    }
+}
+
+export async function updateRatingAsync(id, menuId, userId, ratingValue) {
+    const response = await authorizedFetch(BASE_URL, {
+        method: 'PUT',
+        body: JSON.stringify({ id, menuId, userId, ratingValue })
+    });
+    if (!response.ok) {
+        throw new Error('Failed to update rating');
+    }
+    return response.json();
+}
+
+export async function deleteRatingAsync(ratingId) {
+    const response = await authorizedFetch(`${BASE_URL}/delete/${ratingId}`, {
+        method: 'DELETE'
+    });
+    if (!response.ok) {
+        throw new Error('Failed to delete rating');
+    }
+}
