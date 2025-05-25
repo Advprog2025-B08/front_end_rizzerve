@@ -73,7 +73,7 @@ class CheckoutAPI {
         const response = await fetch(
             `${API_BASE_URL}/checkouts/${cartId}/items/${itemId}?deltaQuantity=${deltaQuantity}`,
             {
-                method: 'PATCH',
+                method: 'PUT',
                 credentials: 'include',
                 headers: this.getAuthHeaders()
             }
@@ -89,7 +89,7 @@ class CheckoutAPI {
     // Submit checkout
     async submitCheckout(checkoutId) {
         const response = await fetch(`${API_BASE_URL}/checkouts/${checkoutId}/submit`, {
-            method: 'PATCH',
+            method: 'PUT',
             credentials: 'include',
             headers: this.getAuthHeaders()
         });

@@ -29,9 +29,6 @@ const CheckoutModule = () => {
     // Determine initial view mode based on user role and URL
     useEffect(() => {
         if (loading) return;
-
-        console.log('AUTH DEBUG → user:', user);
-        console.log('AUTH DEBUG → isAuthenticated:', isAuthenticated);
         if (!isAuthenticated) {
             navigate('/login');
             return;

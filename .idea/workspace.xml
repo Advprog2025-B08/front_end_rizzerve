@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0af845f-b313-4bac-a397-b054a58cf804" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/manage-menu/repositories/MenuRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingAverage/RatingAverage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingAverage/RatingAverage.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingForm/RatingForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingForm/RatingForm.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingPage/RatingPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/components/RatingPage/RatingPage.test.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rating/services/RatingApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manage-menu/ApiClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manage-menu/contexts/MenuContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/manage-menu/contexts/MenuContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manage-menu/services/AuthService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/manage-menu/services/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/manage-menu/services/MenuService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkout/components/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/components/CartItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkout/components/CheckoutModule.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/components/CheckoutModule.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkout/components/CheckoutSummary.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/components/CheckoutSummary.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkout/hooks/useCheckout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/hooks/useCheckout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/checkout/services/CheckoutApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/checkout/services/CheckoutApi.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +47,7 @@
     "Node.js.App.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging checkout",
+    "git-widget-placeholder": "checkout",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/danielangger/Documents/Semester 4/adpro/front_end_rizzerve",
     "node.js.detected.package.eslint": "true",
@@ -75,7 +59,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.npm start.executor": "Run",
     "settings.editor.selected.configurable": "preferences.general",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "C:\\Users\\daffa\\TugasMenugasKuliah-2\\Adpro\\front_end_rizzerve\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

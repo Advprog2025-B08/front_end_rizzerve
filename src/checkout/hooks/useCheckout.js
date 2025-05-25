@@ -2,7 +2,8 @@
 import {useEffect, useRef, useState} from 'react';
 import checkoutAPI from '../services/CheckoutApi';
 import {useAuth} from '../../auth/contexts/AuthContext';
-import {redirect} from "react-router-dom";
+import {redirect, useNavigate} from "react-router-dom";
+import {CheckoutSummaryStates} from "../components/CheckoutSummary";
 
 export const useCheckout = () => {
     const { user } = useAuth();
@@ -94,7 +95,7 @@ export const useCheckout = () => {
             setCheckoutDetails(updatedDetails);
             setSuccess('Quantity berhasil diupdate');
             setTimeout(() => setSuccess(''), 3000);
-
+            // HELP
         } catch (err) {
             console.error('Error updating quantity:', err);
             setError(err.message);
@@ -114,7 +115,6 @@ export const useCheckout = () => {
             setCheckoutDetails(updatedDetails);
             setSuccess('Checkout berhasil disubmit! Menunggu proses admin.');
             setTimeout(() => setSuccess(''), 5000);
-
         } catch (err) {
             console.error('Error submitting checkout:', err);
             setError(err.message);
@@ -138,7 +138,7 @@ export const useCheckout = () => {
             setSuccess('Checkout berhasil dibatalkan');
             setTimeout(() => {
                 setSuccess('');
-                redirect('/pesanan');
+                // navigate ke page pesanan
             }, 2000);
 
         } catch (err) {

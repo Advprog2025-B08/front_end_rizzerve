@@ -12,10 +12,7 @@ const CheckoutSummary = ({
                          }) => {
     // Calculate subtotal, tax, and other fees
     const subtotal = cartItems.reduce((sum, item) => sum + (item.menu.price * item.quantity), 0);
-    const taxRate = 0.1; // 10% tax
-    const taxAmount = subtotal * taxRate;
-    const serviceCharge = 2000; // Fixed service charge
-    const calculatedTotal = subtotal + taxAmount + serviceCharge;
+    const calculatedTotal = subtotal;
 
     // Use provided totalPrice or calculated total
     const finalTotal = totalPrice || calculatedTotal;
@@ -163,7 +160,6 @@ export const CheckoutSummaryStates = {
                 <Calculator className="w-8 h-8 mx-auto" />
             </div>
             <h3 className="text-lg font-medium text-red-900 mb-2">Gagal Memuat Summary</h3>
-            <p className="text-red-700 mb-4">{message}</p>
             {onRetry && (
                 <button
                     onClick={onRetry}

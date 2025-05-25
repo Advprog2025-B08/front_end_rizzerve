@@ -9,7 +9,7 @@ const CartItem = ({ item, onUpdateQuantity, disabled = false }) => {
     };
 
     const handleDecrement = () => {
-        if (item.quantity > 1) {
+        if (item.quantity > 0) {
             onUpdateQuantity(item.id, -1);
         }
     };
@@ -18,12 +18,8 @@ const CartItem = ({ item, onUpdateQuantity, disabled = false }) => {
         <div className="p-4 flex items-center justify-between">
             <div className="flex items-center space-x-4">
                 <img
-                    src={item.menu.url}
                     alt={item.menu.name}
                     className="w-16 h-16 object-cover rounded-lg"
-                    onError={(e) => {
-                        e.target.src = '/api/placeholder/64/64';
-                    }}
                 />
                 <div>
                     <h4 className="font-medium">{item.menu.name}</h4>
@@ -37,7 +33,7 @@ const CartItem = ({ item, onUpdateQuantity, disabled = false }) => {
             <div className="flex items-center space-x-3">
                 <button
                     onClick={handleDecrement}
-                    disabled={disabled || item.quantity <= 1}
+                    disabled={disabled || item.quantity === 0}
                     className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     <Minus className="w-4 h-4" />
