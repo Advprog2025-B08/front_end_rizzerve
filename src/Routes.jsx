@@ -10,6 +10,7 @@ import MejaManagement from './manage-meja/components/MejaManagement';
 import UserTablePanel from './manage-meja/components/UserTablePanel';
 import ProtectedRoute from './components/ProtectedRoute';
 import RatingPage from './rating/components/RatingPage/RatingPage';
+import CheckoutModule from "./checkout/components/CheckoutModule";
 
 // Component to handle the root path redirection
 function RootRedirect() {
@@ -130,6 +131,14 @@ export default function Routes() {
               </ProtectedRoute>
             }
           />
+            <Route
+                path="/checkout"
+                element={
+                    <ProtectedRoute>
+                        <CheckoutModule />
+                    </ProtectedRoute>
+                }
+            />
         </Route>
       </RouterRoutes>
     </BrowserRouter>
