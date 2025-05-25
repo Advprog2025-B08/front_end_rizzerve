@@ -8,11 +8,11 @@ class AuthService {
   async login(credentials) {
     try {
       const response = await this.authRepository.login(credentials);
-      
+      // console.log('Login response:', response);
       return {
         token: response.token,
         user: {
-          id: response.id,
+          id: response.userId,
           username: response.username,
           role: response.role,
         }

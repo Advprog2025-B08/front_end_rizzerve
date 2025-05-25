@@ -1,0 +1,518 @@
+/* MejaManagement.css */
+
+/* Reset and base styles for this component */
+.meja-management-wrapper {
+  all: initial;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  color: #1a202c;
+  background: #f8fafc;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.meja-management-wrapper *,
+.meja-management-wrapper *::before,
+.meja-management-wrapper *::after {
+  box-sizing: border-box;
+}
+
+.meja-management {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Connection Status */
+.meja-connection-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  border-radius: 12px;
+  border: 1px solid;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.meja-connection-status.connected {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border-color: #28a745;
+  color: #155724;
+}
+
+.meja-connection-status.disconnected {
+  background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.meja-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.meja-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+}
+
+.meja-status-dot.connected {
+  background: #28a745;
+  animation: meja-pulse 2s infinite;
+}
+
+.meja-status-dot.disconnected {
+  background: #dc3545;
+}
+
+@keyframes meja-pulse {
+  0% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.meja-last-updated {
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.meja-refresh-btn {
+  background: rgba(255,255,255,0.2) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  color: inherit !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.meja-refresh-btn:hover {
+  background: rgba(255,255,255,0.3) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Create Table Section */
+.meja-create-section {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-bottom: 32px;
+  border: 1px solid #e2e8f0;
+}
+
+.meja-create-section h2 {
+  margin: 0 0 16px 0;
+  color: #1a202c;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.meja-create-form {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+}
+
+.meja-form-group {
+  flex: 1;
+}
+
+.meja-form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.meja-form-group input {
+  width: 100%;
+  padding: 12px 16px !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  transition: all 0.2s ease;
+  background: #f8fafc;
+}
+
+.meja-form-group input:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important;
+  background: white !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+.meja-create-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+  border: none !important;
+  padding: 12px 24px !important;
+  border-radius: 8px !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
+}
+
+.meja-create-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3) !important;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+}
+
+/* Table List Section */
+.meja-table-section {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+}
+
+.meja-table-section h3 {
+  padding: 24px;
+  margin: 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  color: #1a202c;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.meja-table-count {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Override global table styles */
+.meja-table-wrapper {
+  overflow-x: auto;
+}
+
+/* Table - Override global styles */
+.meja-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 0 !important;
+}
+
+.meja-data-table th {
+  background: #f8fafc !important;
+  padding: 16px !important;
+  text-align: left;
+  font-weight: 700;
+  color: #374151;
+  border: none !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.meja-data-table td {
+  padding: 16px !important;
+  border: none !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  vertical-align: top;
+  background: transparent !important;
+}
+
+.meja-data-table tr:hover {
+  background: #f8fafc !important;
+  transition: background-color 0.2s ease;
+}
+
+.meja-data-table tr:nth-child(even) {
+  background: transparent !important;
+}
+
+.meja-data-table tr.occupied {
+  background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%) !important;
+}
+
+.meja-data-table tr.available {
+  background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%) !important;
+}
+
+.meja-data-table tr.occupied:hover {
+  background: linear-gradient(135deg, #fef2f2 0%, #fed7d7 100%) !important;
+}
+
+.meja-data-table tr.available:hover {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%) !important;
+}
+
+/* Table Number */
+.meja-table-number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+.meja-table-id {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Status Badges */
+.meja-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meja-status-badge.occupied {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: white;
+}
+
+.meja-status-badge.available {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  color: white;
+}
+
+/* Current User */
+.meja-current-user {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.meja-not-assigned {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Cart Items Preview */
+.meja-cart-preview {
+  max-width: 280px;
+}
+
+.meja-cart-summary {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a202c;
+  font-size: 14px;
+}
+
+.meja-cart-details {
+  font-size: 12px;
+  max-height: 120px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f8fafc;
+}
+
+.meja-cart-details::-webkit-scrollbar {
+  width: 4px;
+}
+
+.meja-cart-details::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.meja-cart-details::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.meja-cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.meja-cart-item-row:last-child {
+  border-bottom: none;
+}
+
+.meja-cart-item-name {
+  flex: 1;
+  color: #374151;
+  font-weight: 500;
+}
+
+.meja-quantity {
+  color: #3b82f6;
+  font-weight: 700;
+  background: #eff6ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.meja-no-items {
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px;
+}
+
+/* Action Buttons */
+.meja-action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.meja-action-btn {
+  padding: 8px 16px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.meja-action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.meja-action-btn.assign {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: white !important;
+}
+
+.meja-action-btn.assign:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+}
+
+.meja-action-btn.complete {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%) !important;
+  color: white !important;
+}
+
+.meja-action-btn.complete:hover {
+  background: linear-gradient(135deg, #15803d 0%, #166534 100%) !important;
+}
+
+.meja-action-btn.edit {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%) !important;
+  color: white !important;
+}
+
+.meja-action-btn.edit:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%) !important;
+}
+
+.meja-action-btn.delete {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%) !important;
+  color: white !important;
+}
+
+.meja-action-btn.delete:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .meja-management {
+    padding: 16px;
+  }
+  
+  .meja-create-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .meja-data-table {
+    font-size: 13px;
+  }
+  
+  .meja-data-table th,
+  .meja-data-table td {
+    padding: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .meja-connection-status {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  
+  .meja-action-buttons {
+    flex-direction: column;
+  }
+  
+  .meja-action-btn {
+    width: 100%;
+  }
+  
+  .meja-cart-preview {
+    max-width: 100%;
+  }
+}
+
+/* Loading States */
+.meja-loading-overlay {
+  position: relative;
+}
+
+.meja-loading-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meja-spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #3b82f6;
+  border-radius: 50%;
+  animation: meja-spin 1s linear infinite;
+}
+
+@keyframes meja-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
