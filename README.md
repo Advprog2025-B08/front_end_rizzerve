@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Restaurant Management System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend application for the Restaurant Management System, built as part of the Advanced Programming (Pemrograman Lanjut) course project.
+
+## Project Overview
+
+A React-based web application for managing restaurant operations including menu management, order processing, and staff administration.
 
 ## Available Scripts
 

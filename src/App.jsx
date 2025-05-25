@@ -1,11 +1,14 @@
-// App.jsx
-import { Routes, Route } from 'react-router-dom';
-import RatingPage from './rating/components/RatingPage/RatingPage';
+import React from 'react'
+import { AuthProvider } from './auth/contexts/AuthContext'
+import { MenuProvider } from './manage-menu/contexts/MenuContext'
+import Routes from './Routes'
 
 export default function App() {
-    return (
-        <Routes>
-            <Route path="/ratings" element={<RatingPage />} />
-        </Routes>
-    );
+  return (
+    <AuthProvider>
+      <MenuProvider>
+        <Routes/>
+      </MenuProvider>
+    </AuthProvider>
+  )
 }
