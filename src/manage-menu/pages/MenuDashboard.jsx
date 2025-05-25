@@ -134,7 +134,7 @@ const handleClearCart = async () => {
 
   return (
     <div className="space-y-6">
-      {token && userId && (
+      {token && userId && !isAdmin && (
         <div className="bg-white p-4 rounded-lg shadow-lg border-l-4 border-blue-500">
           <div className="flex justify-between items-center mb-3">
             <h3 className="text-lg font-semibold flex items-center">
