@@ -4,7 +4,9 @@ import LoadingSpinner from '../../general/components/ui/Loading';
 import Button from '../../general/components/ui/Button';
 import Alert from '../../general/components/ui/Alert';
 import MenuForm from '../forms/MenuForm';
+import MenuRating from '../components/MenuRating';
 import { useMenu } from '../contexts/MenuContext';
+import { useAuth } from '../../auth/contexts/AuthContext';
 
 const MenuDashboard = () => {
   const [menus, setMenus] = useState([]);
@@ -12,12 +14,19 @@ const MenuDashboard = () => {
   const [error, setError] = useState('');
   const [showForm, setShowForm] = useState(false);
   const [editingMenu, setEditingMenu] = useState(null);
-  const { menuService, isAdmin } = useMenu();
+  const { menuService } = useMenu();
+  const { user } = useAuth();
+
+  // Check if user is admin
+  const isAdmin = user?.role === 'ADMIN';
 
   const loadMenus = async () => {
     try {
       setLoading(true);
-      const data = isAdmin ? await menuService.getAllMenus() : await menuService.getActiveMenus();
+      // Fetch all menus if admin, only active menus if regular user
+      const data = isAdmin 
+        ? await menuService.getAllMenus() 
+        : await menuService.getActiveMenus();
       setMenus(data);
     } catch (err) {
       setError(err.message);
@@ -28,7 +37,7 @@ const MenuDashboard = () => {
 
   useEffect(() => {
     loadMenus();
-  }, [isAdmin]);
+  }, [isAdmin]); // Re-fetch when admin status changes
 
   const handleCreateMenu = async (menuData) => {
     try {
@@ -77,7 +86,9 @@ const MenuDashboard = () => {
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold">Menu Dashboard</h2>
+        <h2 className="text-2xl font-bold">
+          {isAdmin ? 'Menu Management' : 'Menu'}
+        </h2>
         {isAdmin && (
           <Button onClick={() => setShowForm(true)}>
             <Plus className="w-4 h-4 mr-2" />
@@ -120,26 +131,36 @@ const MenuDashboard = () => {
             </div>
             <p className="text-gray-600 mb-2">{menu.description}</p>
             <p className="text-sm text-gray-500 mb-2">URL: {menu.url}</p>
-            <p className="text-sm text-gray-500 mb-2">Order: {menu.displayOrder}</p>
-            <span
-              className={`inline-block px-2 py-1 rounded text-xs ${
-                menu.isActive
-                  ? 'bg-green-100 text-green-800'
-                  : 'bg-red-100 text-red-800'
-              }`}
-            >
-              {menu.isActive ? 'Active' : 'Inactive'}
-            </span>
+            <p className="text-sm text-gray-500 mb-4">Order: {menu.displayOrder}</p>
+            
+            {/* Rating Component */}
+            <div className="border-t pt-3 mb-3">
+              <MenuRating menuId={menu.id} />
+            </div>
+            
+            {/* Show status only for admins */}
+            {isAdmin && (
+              <span
+                className={`inline-block px-2 py-1 rounded text-xs ${
+                  menu.isActive
+                    ? 'bg-green-100 text-green-800'
+                    : 'bg-red-100 text-red-800'
+                }`}
+              >
+                {menu.isActive ? 'Active' : 'Inactive'}
+              </span>
+            )}
           </div>
         ))}
       </div>
 
       {menus.length === 0 && !loading && (
         <div className="text-center py-8 text-gray-500">
-          No menus found.
+          {isAdmin ? 'No menus found.' : 'No active menus available.'}
         </div>
       )}
     </div>
   );
 };
+
 export default MenuDashboard;
