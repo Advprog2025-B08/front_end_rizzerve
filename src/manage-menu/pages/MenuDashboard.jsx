@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, Edit, Trash2 } from 'lucide-react';
-import LoadingSpinner from '../Components/Loading';
-import Button from '../Components/Button';
-import Alert from '../Components/Alert';
-import MenuForm from '../Forms/MenuForm';
-import { useApp } from '../Contexts/AppContext';
+import LoadingSpinner from '../../general/components/ui/Loading';
+import Button from '../../general/components/ui/Button';
+import Alert from '../../general/components/ui/Alert';
+import MenuForm from '../forms/MenuForm';
+import { useMenu } from '../contexts/MenuContext';
 
 const MenuDashboard = () => {
   const [menus, setMenus] = useState([]);
@@ -12,7 +12,7 @@ const MenuDashboard = () => {
   const [error, setError] = useState('');
   const [showForm, setShowForm] = useState(false);
   const [editingMenu, setEditingMenu] = useState(null);
-  const { menuService, isAdmin } = useApp();
+  const { menuService, isAdmin } = useMenu();
 
   const loadMenus = async () => {
     try {

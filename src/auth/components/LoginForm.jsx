@@ -1,32 +1,60 @@
 import React, { useState } from 'react';
 import { User } from 'lucide-react';
-import Input from '../Components/Input';
-import Button from '../Components/Button';
-import Alert from '../Components/Alert';
-import { useApp } from '../Contexts/AppContext';
+import Input from '../../general/components/ui/Input';
+import Button from '../../general/components/ui/Button';
+import Alert from '../../general/components/ui/Alert';
+import { useAuth } from '../contexts/AuthContext';
 
 const LoginForm = ({ onSwitchToRegister }) => {
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const { login } = useApp();
+  const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!formData.username.trim()) {
+      setError('Username is required');
+      return;
+    }
+
+    if (!formData.password.trim()) {
+      setError('Password is required');
+      return;
+    }
+
+    if (formData.password.length < 3) {
+      setError('Password must be at least 3 characters long');
+      return;
+    }
+
     setLoading(true);
     setError('');
 
     try {
-      await login(formData);
+      await login({
+        username: formData.username.trim(),
+        password: formData.password
+      });
     } catch (err) {
-      setError(err.message);
+      console.error('Login error:', err);
+      setError(err.message || 'Login failed. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData(prev => ({ 
+      ...prev, 
+      [name]: value 
+    }));
+    
+    if (error) {
+      setError('');
+    }
   };
 
   return (
@@ -39,7 +67,7 @@ const LoginForm = ({ onSwitchToRegister }) => {
 
       {error && <Alert variant="error">{error}</Alert>}
 
-      <div onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <Input
           label="Username"
           type="text"
@@ -47,6 +75,8 @@ const LoginForm = ({ onSwitchToRegister }) => {
           value={formData.username}
           onChange={handleChange}
           required
+          autoComplete="username"
+          placeholder="Enter your username"
         />
         <Input
           label="Password"
@@ -55,17 +85,25 @@ const LoginForm = ({ onSwitchToRegister }) => {
           value={formData.password}
           onChange={handleChange}
           required
+          autoComplete="current-password"
+          placeholder="Enter your password"
         />
-        <Button type="submit" loading={loading} className="w-full mb-4">
-          Sign In
+        <Button 
+          type="submit" 
+          loading={loading} 
+          className="w-full mb-4"
+          disabled={!formData.username.trim() || !formData.password.trim()}
+        >
+          {loading ? 'Signing In...' : 'Sign In'}
         </Button>
-      </div>
+      </form>
 
       <p className="text-center text-gray-600">
         Don't have an account?{' '}
         <button
           onClick={onSwitchToRegister}
-          className="text-blue-600 hover:underline font-medium"
+          className="text-blue-600 hover:underline font-medium focus:outline-none focus:underline"
+          type="button"
         >
           Sign up
         </button>
@@ -73,4 +111,5 @@ const LoginForm = ({ onSwitchToRegister }) => {
     </div>
   );
 };
+
 export default LoginForm;

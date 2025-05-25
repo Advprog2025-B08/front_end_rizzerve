@@ -1,9 +1,9 @@
 import { Layout, LogOut } from 'lucide-react';
-import { useApp } from '../Contexts/AppContext';
+import { useAuth } from '../contexts/AuthContext';
 import Button from './Button';
 
 const Header = () => {
-  const { user, logout } = useApp();
+  const { user, logout } = useAuth();
 
   return (
     <header className="bg-white shadow-sm border-b">
