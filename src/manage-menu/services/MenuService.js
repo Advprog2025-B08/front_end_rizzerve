@@ -43,7 +43,7 @@ class MenuRepository {
   }
 
   async getAllMenus() {
-    return this.client.get('/menus');
+    return this.client.get('/menus/all');
   }
 
   async getMenuById(id) {

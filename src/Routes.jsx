@@ -6,6 +6,8 @@ import HomePage from './pages/HomePage';
 import MenuDashboard from './manage-menu/pages/MenuDashboard';
 import LoginPage from './auth/pages/LoginPage';
 import RegisterPage from './auth/pages/RegisterPage';
+import MejaManagement from './manage-meja/components/MejaManagement';
+import UserTablePanel from './manage-meja/components/UserTablePanel';
 import ProtectedRoute from './components/ProtectedRoute';
 import RatingPage from './rating/components/RatingPage/RatingPage';
 
@@ -14,20 +16,69 @@ function RootRedirect() {
   const { isAuthenticated, loading } = useAuth();
   
   if (loading) {
-    return <div>Loading...</div>; // Or your loading component
+    return <div>Loading...</div>;
   }
   
   return isAuthenticated ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />;
 }
 
-function ProtectedRouteWrapper({ children }) {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? children : <Navigate to="/login" replace />;
+function RoleProtectedRoute({ children, allowedRoles = [] }) {
+  const { isAuthenticated, loading } = useAuth();
+  
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
+
+  try {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    const userRole = userData?.role;
+    
+    if (!userRole) {
+      console.warn('User role not found in localStorage');
+      return <Navigate to="/dashboard" replace />;
+    }
+    
+    // Fix: Use includes() instead of 'in' operator
+    if (allowedRoles.includes(userRole)) {
+      return children;
+    } else {
+      console.warn(`Access denied. User role: ${userRole}, Required roles: ${allowedRoles.join(', ')}`);
+      return <Navigate to="/dashboard" replace />;
+    }
+  } catch (error) {
+    console.error('Error parsing userData from localStorage:', error);
+    return <Navigate to="/login" replace />;
+  }
+}
+
+function AdminRoute({ children }) {
+  return (
+    <RoleProtectedRoute allowedRoles={['ADMIN']}>
+      {children}
+    </RoleProtectedRoute>
+  );
+}
+
+function UserRoute({ children }) {
+  return (
+    <RoleProtectedRoute allowedRoles={['USER']}>
+      {children}
+    </RoleProtectedRoute>
+  );
 }
 
 export default function Routes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
       <RouterRoutes>
         {/* Public routes */}
         <Route path="/login" element={<LoginPage />} />
@@ -39,7 +90,7 @@ export default function Routes() {
         {/* Protected routes with layout */}
         <Route path="/" element={<Layout />}>
           <Route
-            path="/dashboard"
+            path="dashboard"
             element={
               <ProtectedRoute>
                 <HomePage />
@@ -47,11 +98,28 @@ export default function Routes() {
             }
           />
           <Route
-            path="/menu"
+            path="menu"
             element={
               <ProtectedRoute>
                 <MenuDashboard />
               </ProtectedRoute>
+            }
+          />
+          <Route
+            path="admin/meja"
+            element={
+              <AdminRoute>
+                <MejaManagement />
+              </AdminRoute>
+            }
+          />
+          
+          <Route
+            path="meja"
+            element={
+              <UserRoute>
+                <UserTablePanel />
+              </UserRoute>
             }
           />
           <Route
