@@ -46,7 +46,7 @@ export const apiService = {
   
   getAllMeja: async (token) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/admin/read`, {
+      const response = await fetch(`${API_BASE_URL}/meja/user/read`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -68,7 +68,7 @@ export const apiService = {
   
   getMejaById: async (token, mejaId) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/meja/admin/read/${mejaId}`, {
+      const response = await fetch(`${API_BASE_URL}/meja/user/read/${mejaId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
