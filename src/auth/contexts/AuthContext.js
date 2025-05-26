@@ -23,7 +23,8 @@ export function AuthProvider({ children }) {
     }
     setLoading(false)
   }, [])
-
+  
+  
   const login = async (credentials) => {
     try {
       setLoading(true)
@@ -51,12 +52,25 @@ export function AuthProvider({ children }) {
 
   const isAuthenticated = !!user
 
+  const register = async (userData) => {
+    try {
+      setLoading(true)
+      const response = await AuthService.register(userData)
+      return response
+    } catch (error) {
+      throw error
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <AuthContext.Provider value={{
       user,
       loading,
       login,
       logout,
+      register,
       isAuthenticated,
 
       getCurrentUser: AuthService.getCurrentUser,

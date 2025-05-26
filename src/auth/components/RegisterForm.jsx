@@ -10,7 +10,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const { authService } = useAuth();
+  const { register } = useAuth();
 
   const validateForm = () => {
     const errors = [];
@@ -57,7 +57,7 @@ const RegisterForm = ({ onSwitchToLogin }) => {
         role: formData.role
       };
 
-      await authService.register(registrationData);
+      await register(registrationData);
       setSuccess('Registration successful! You can now sign in.');
       setFormData({ username: '', password: '', role: 'USER' });
       

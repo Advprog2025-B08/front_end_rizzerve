@@ -7,7 +7,7 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({
     name: menu?.name || '',
     description: menu?.description || '',
-    url: menu?.url || '',
+    price: menu?.price || 0,
     icon: menu?.icon || '',
     displayOrder: menu?.displayOrder || 0,
     isActive: menu?.isActive !== undefined ? menu.isActive : true,
@@ -28,15 +28,12 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
       errors.push('Description must be less than 500 characters');
     }
 
-    if (formData.url && formData.url.trim()) {
-      try {
-        new URL(formData.url);
-      } catch {
-        // If not a valid URL, check if it's a relative path
-        if (!formData.url.startsWith('/') && !formData.url.startsWith('./') && !formData.url.startsWith('../')) {
-          errors.push('Invalid URL format');
-        }
-      }
+    // Price validation
+    const price = parseFloat(formData.price);
+    if (isNaN(price) || price < 0) {
+      errors.push('Price must be a valid positive number');
+    } else if (price > 999999999) {
+      errors.push('Price is too high');
     }
 
     if (isNaN(parseInt(formData.displayOrder)) || parseInt(formData.displayOrder) < 0) {
@@ -64,7 +61,7 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
         ...formData,
         name: formData.name.trim(),
         description: formData.description.trim(),
-        url: formData.url.trim(),
+        price: parseFloat(formData.price) || 0,
         icon: formData.icon.trim(),
         displayOrder: parseInt(formData.displayOrder) || 0,
         isActive: Boolean(formData.isActive)
@@ -81,7 +78,12 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
 
   const handleChange = (e) => {
     const { name, type, value, checked } = e.target;
-    const newValue = type === 'checkbox' ? checked : value;
+    let newValue = type === 'checkbox' ? checked : value;
+    
+    // Special handling for price to ensure it's always a valid number
+    if (name === 'price') {
+      newValue = value === '' ? 0 : parseFloat(value) || 0;
+    }
     
     setFormData(prev => ({ 
       ...prev, 
@@ -133,12 +135,15 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
         </div>
 
         <Input
-          label="URL"
-          type="text"
-          name="url"
-          value={formData.url}
+          label="Price (Rp) *"
+          type="number"
+          name="price"
+          value={formData.price}
           onChange={handleChange}
-          placeholder="e.g., /dashboard or https://example.com"
+          required
+          placeholder="Enter price in Rupiah"
+          min="0"
+          step="1000"
         />
         
         <Input
@@ -176,6 +181,7 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
         </div>
         
         <div className="flex gap-2">
+          <div className="flex gap-2">
           <Button 
             type="submit" 
             loading={loading}
@@ -191,6 +197,7 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
           >
             Cancel
           </Button>
+        </div>
         </div>
       </form>
     </div>
