@@ -345,10 +345,6 @@ export default function MenuDashboard() {
                   
                   {/* Admin Status & Additional Info */}
                   <div className="flex justify-between items-center text-sm text-gray-500 border-t border-gray-100 pt-4">
-                    <div className="flex items-center gap-2">
-                      <Award className="w-4 h-4" />
-                      <span>Order: {menu.displayOrder}</span>
-                    </div>
                     {isAdmin && (
                       <span
                         className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
@@ -361,13 +357,6 @@ export default function MenuDashboard() {
                       </span>
                     )}
                   </div>
-
-                  {/* Menu URL (for reference) */}
-                  {menu.url && (
-                    <div className="mt-2 text-xs text-gray-400 border-t border-gray-100 pt-2">
-                      URL: {menu.url}
-                    </div>
-                  )}
                 </div>
               )}
             </div>
