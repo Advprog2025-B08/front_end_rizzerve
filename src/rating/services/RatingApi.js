@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8080/ratings';
+const BASE_URL = `${process.env.REACT_APP_API_URL}/ratings` || 'http://localhost:8080/ratings';
 
 async function authorizedFetch(url, options = {}) {
     const token = localStorage.getItem('authToken');
