@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8080';
+
 export default function RatingForm({ menuId }) {
     const [rating, setRating] = useState('');
     const [ratingId, setRatingId] = useState('');
@@ -9,7 +11,7 @@ export default function RatingForm({ menuId }) {
         const userData = JSON.parse(localStorage.getItem('userData'));
         const userId = userData?.userId || userData?.id || 1;
 
-        const response = await fetch('http://localhost:8080/api/ratings', {
+        const response = await fetch(`${API_BASE_URL}/ratings`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +32,7 @@ export default function RatingForm({ menuId }) {
     };
 
     const handleUpdate = async () => {
-        const response = await fetch('http://localhost:8080/ratings', {
+        const response = await fetch(`${API_BASE_URL}/ratings`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -50,7 +52,7 @@ export default function RatingForm({ menuId }) {
     };
 
     const handleDelete = async () => {
-        const response = await fetch(`http://localhost:8080/ratings/delete/${ratingId}`, {
+        const response = await fetch(`${API_BASE_URL}/ratings/delete/${ratingId}`, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${token}`
