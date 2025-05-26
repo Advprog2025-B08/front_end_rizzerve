@@ -386,10 +386,25 @@ export default function MenuDashboard() {
                     )}
                   </div>
 
-                  {/* Rating */}
-                  <div className="mb-4 p-3 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl border border-yellow-100">
-                    <MenuRating menuId={menu.id} />
-                  </div>
+                  {/* Rating - Only show for NON-ADMIN users */}
+                  {!isAdmin && (
+                    <div className="mb-4 p-3 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl border border-yellow-100">
+                      <MenuRating menuId={menu.id} />
+                    </div>
+                  )}
+
+                  {/* Admin Info Panel - Only show for ADMIN users */}
+                  {isAdmin && (
+                    <div className="mb-4 p-3 bg-gradient-to-r from-gray-50 to-slate-50 rounded-2xl border border-gray-100">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Award className="w-4 h-4" />
+                        <span className="text-sm font-medium">Admin View</span>
+                      </div>
+                      <p className="text-xs text-gray-500 mt-1">
+                        Rating functionality is disabled for administrators
+                      </p>
+                    </div>
+                  )}
 
                   {/* Add to Cart for Non-Admin */}
                   {!isAdmin && menu.isActive && (

@@ -5,7 +5,7 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
   const [formData, setFormData] = useState({
     name: '',
     description: '',
-    url: '',
+    price: 0,
     displayOrder: 0,
     isActive: true
   });
@@ -20,7 +20,7 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
       setFormData({
         name: menu.name || '',
         description: menu.description || '',
-        url: menu.url || '',
+        price: menu.price || 0,
         displayOrder: menu.displayOrder || 0,
         isActive: menu.isActive !== undefined ? menu.isActive : true
       });
@@ -38,10 +38,8 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
       newErrors.description = 'Description is required';
     }
 
-    if (!formData.url.trim()) {
-      newErrors.url = 'URL is required';
-    } else if (!formData.url.startsWith('/') && !formData.url.startsWith('http')) {
-      newErrors.url = 'URL should start with "/" for internal links or "http" for external links';
+    if (!formData.price < 0) {
+      newErrors.price = 'Price must be a non-negative number';
     }
 
     if (formData.displayOrder < 0) {
@@ -140,21 +138,21 @@ const MenuForm = ({ menu, onSubmit, onCancel }) => {
 
         {/* URL */}
         <div>
-          <label htmlFor="url" className="block text-sm font-medium text-gray-700 mb-1">
-            URL *
+          <label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-1">
+            Price *
           </label>
           <input
-            type="text"
-            id="url"
-            name="url"
-            value={formData.url}
+            type="number"
+            id="price"
+            name="price"
+            value={formData.price}
             onChange={handleChange}
             className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
-              errors.url ? 'border-red-500' : 'border-gray-300'
+              errors.price ? 'border-red-500' : 'border-gray-300'
             }`}
-            placeholder="/menu-path or https://external-link.com"
+            placeholder="0"
           />
-          {errors.url && <p className="text-red-500 text-sm mt-1">{errors.url}</p>}
+          {errors.price && <p className="text-red-500 text-sm mt-1">{errors.price}</p>}
         </div>
 
         {/* Display Order */}
