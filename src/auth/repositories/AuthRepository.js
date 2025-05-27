@@ -2,7 +2,7 @@ import axios from 'axios';
 
 class AuthRepository {
 
-    constructor(baseURL = process.env.API_BASE_URL || 'http://localhost:8080/api') {
+    constructor(baseURL = `${process.env.REACT_APP_API_URL}/api` || 'http://localhost:8080/api') {
         this.client = axios.create({
           baseURL,
           timeout: 10000,
